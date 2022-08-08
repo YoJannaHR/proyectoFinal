@@ -1,0 +1,15 @@
+.imgProducts{
+
+    width: 80%;
+    height: 100px;
+    object-fit: contain;
+ 
+}
+
+.card{
+
+/* max-width: 250px; */
+min-height:300px;
+padding: 20px
+
+}

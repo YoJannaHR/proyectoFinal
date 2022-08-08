@@ -1,0 +1,20 @@
+.container-productDetail{
+
+    display: flex;
+    gap:30px;
+    margin-bottom: 50px;
+    flex-wrap:wrap;
+    justify-content: center;
+    background-color: black;
+}
+.image-productDetail{
+
+    object-fit: contain;
+    width: 43%;
+}
+
+.description-productDetail{
+  
+    width: 50%;
+
+}
