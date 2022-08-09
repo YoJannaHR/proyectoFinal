@@ -10,12 +10,12 @@ const NaBvar = () => {
           <Navbar.Brand href="/#/">e-comerce</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
+            <Nav className="me-auto" >
               <Nav.Link href="/#/">Home</Nav.Link>
               {/* <Nav.Link href="/#/products/:id">Products</Nav.Link> */}
               <Nav.Link href="/#/Purchases">Purchases</Nav.Link>
               <Nav.Link href="/#/Login">Login</Nav.Link>
-              <Nav.Link ><i class="fa-solid fa-cart-shopping"></i></Nav.Link>
+              <Nav.Link style={{marginLeft:"450%"}}><i class="fa-solid fa-cart-shopping"></i></Nav.Link>
        
             </Nav>
           </Navbar.Collapse>

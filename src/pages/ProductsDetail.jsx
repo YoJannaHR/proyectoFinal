@@ -56,10 +56,10 @@ const ProductsDetail = () => {
           alt=""
         /> */}
 
-        <Carousel activeIndex={index} onSelect={handleSelect}>
+        <Carousel activeIndex={index} onSelect={handleSelect} variant="dark">
           {productDetail?.productImgs?.map((img) => (
             <Carousel.Item>
-              <img className="d-block  image-productDetail" src={img} alt="First slide" />
+              <img className="d-block image-productDetail" src={img} alt="First slide" />
             </Carousel.Item>
           ))}
         </Carousel>

@@ -5,12 +5,13 @@
     margin-bottom: 50px;
     flex-wrap:wrap;
     justify-content: center;
-    background-color: black;
+    /* background-color: black; */
 }
 .image-productDetail{
 
     object-fit: contain;
-    width: 43%;
+    width: 300px;
+    max-height: 150px;
 }
 
 .description-productDetail{
