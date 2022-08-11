@@ -5,17 +5,36 @@
     margin-bottom: 50px;
     flex-wrap:wrap;
     justify-content: center;
+
     /* background-color: black; */
 }
 .image-productDetail{
 
     object-fit: contain;
-    width: 300px;
-    max-height: 150px;
+    width: 500px;
+    max-height: 300px;
+   
+
 }
 
 .description-productDetail{
   
-    width: 50%;
+    width: 40%;
+  
+}
 
+.img{
+
+    width:600px;
+    height:360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.similar-items{
+
+    width:100px;
+    height:200px;
+    object-fit: contain;
 }

@@ -15,6 +15,7 @@ useEffect( () => {
 },[])
     return (
         <div className="container mt-5">
+            <div className='largo'>
             <h1>My purchases</h1>
             {
                    purchases?.length?(
@@ -45,7 +46,7 @@ useEffect( () => {
                         ):(<p>No products yet</p>)
                      
             }
-          
+          </div>
         </div>
     );
 };

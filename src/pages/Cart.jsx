@@ -1,11 +1,11 @@
-import React from 'react';
+// import React from 'react';
 
-const Cart = () => {
-    return (
-        <div>
+// const Cart = () => {
+//     return (
+//         <div>
             
-        </div>
-    );
-};
+//         </div>
+//     );
+// };
 
-export default Cart;
+// export default Cart;

@@ -35,7 +35,7 @@ const Home = () => {
       .then((res) => setCategories(res.data.data.categories));
   }, []);
 
-  console.log(categories);
+  // console.log(categories);
 
   return (
     <div className="container mt-5">
@@ -54,7 +54,7 @@ const Home = () => {
           </ListGroup>
         </Col>
         <Col>
-          <h1>Home</h1>
+   
 
           <InputGroup className="mb-3">
             <Form.Control
