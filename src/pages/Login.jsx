@@ -69,9 +69,9 @@ const Login = () => {
             <button className="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3">
               Log in
             </button>
-            <a className="text-muted" href="#!">
+            {/* <a className="text-muted" >
               Forgot password?
-            </a>
+            </a> */}
           </div>
 
           <div className="d-flex align-items-center justify-content-center pb-4">

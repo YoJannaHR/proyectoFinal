@@ -49,15 +49,19 @@ const ProductsDetail = () => {
 
   return (
     <div className="container mt-5 productDetail">
-      <div className="container-productDetail" >
-        <Carousel className="img"  activeIndex={index} onSelect={handleSelect} variant="dark">
+      <div className="container-productDetail">
+        <Carousel
+          className="img"
+          activeIndex={index}
+          onSelect={handleSelect}
+          variant="dark"
+        >
           {productDetail?.productImgs?.map((img) => (
-            <Carousel.Item  key={img} >
+            <Carousel.Item key={img}>
               <img
                 className="d-block image-productDetail"
                 src={img}
                 alt="First slide"
-              
               />
             </Carousel.Item>
           ))}
@@ -67,20 +71,27 @@ const ProductsDetail = () => {
           <h1>{productDetail?.title}</h1>
           <p>{productDetail?.description}</p>
           <h3>
+           
+            <span> Price </span>
             <span>$</span>
             {productDetail?.price}
           </h3>
-          <input
-            className="form-control me-sm-2"
-            type="number"
-            placeholder="Cantidad"
-            value={quantity}
-            onChange={(e) => setQuantity(e.target.value)}
-          />
-          <button className="btn btn-primary" onClick={addCart}>
-            <i className="fa-solid fa-cart-shopping"></i>
-            buy now
-          </button>
+          <div className="select-buy">
+           <div className="quantity">
+            <label className="label-quantity" htmlFor=""><b>Quantity:</b></label>
+            <input
+              className="form-control me-sm-2 quantity-input"
+              type="number"
+              value={quantity}
+              onChange={(e) => setQuantity(e.target.value)}
+            />
+            </div>
+            
+            <button className="btn btn-primary button-selectBuy" onClick={addCart}>
+              <i className="fa-solid fa-cart-shopping"></i>
+              buy now
+            </button>
+          </div>
         </div>
       </div>
 
