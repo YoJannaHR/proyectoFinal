@@ -58,7 +58,7 @@ const Home = () => {
 
           <InputGroup className="mb-3">
             <Form.Control
-              placeholder="Recipient's username"
+              placeholder="search"
               aria-label="Recipient's username"
               aria-describedby="basic-addon2"
               onChange={(e) => setSearchValue(e.target.value)}
