@@ -17,6 +17,16 @@ const CartSidebar = ({ show, handleClose }) => {
 
   console.log(productsCart);
 
+
+
+  const getTotal = (product) =>{
+    let results = 0
+    for (let i = 0; i < product.length; i++) {
+      results += (product[i].productsInCart.quantity * parseInt(product[i].price))  
+    }
+    return results
+  }
+
   return (
     <Offcanvas show={show} onHide={handleClose} scroll={true} placement="end">
       <Offcanvas.Header closeButton>
@@ -25,17 +35,26 @@ const CartSidebar = ({ show, handleClose }) => {
       <Offcanvas.Body >
         {productsCart?.map((productCart) => (
           <div className="body-cart" key={productCart.id}>
-            <span>{productCart.brand}</span>
-            <b onClick={() => navigate(`/products/${productCart.id}`)}>
-              {productCart.title}
-            </b>
-            <a>Quantity products: {productCart.productsInCart.quantity}</a>
-            <b>{productCart.price}</b>
+            <div className="product-cart">
+            <span><b>Category: </b>{productCart.brand}</span>
+            
+            <a onClick={() => navigate(`/products/${productCart.id}`)}>
+            <b>Product :</b> {productCart.title}
+            </a> 
+            <a> <b>Quantity products:</b> {productCart.productsInCart?.quantity}</a>
             <hr />
+            <b>Unit price $ {productCart.price}</b>
+            <hr />
+            <b>Sub Total Price $ {productCart.productsInCart.quantity * parseInt(productCart.price)} </b>
+              </div>
+            
             {/* pendiente logo de eliminar */}
-       
+          
           </div>
         ))}
+         <hr />
+        <b>Total Cart $ {getTotal(productsCart)}</b>
+        <hr />
         <button className="button-buy" onClick={() => dispatch(buyCart())}>
           buy Cart
         </button>

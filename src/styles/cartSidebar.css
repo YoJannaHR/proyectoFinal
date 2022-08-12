@@ -14,3 +14,13 @@
     gap: 5px;
     margin-top: 20px;
 }
+
+.product-cart{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    border:rgb(185, 184, 184) solid 1px;
+    border-radius:10px;
+    margin-bottom: 20px;
+}

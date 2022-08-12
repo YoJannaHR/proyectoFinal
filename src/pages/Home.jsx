@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  filterCategoryThunk,
-  filterHeadlineThunk,
-  getProductsListThunk,
-} from "../store/slices/productsList.slice";
+import {filterCategoryThunk,filterHeadlineThunk,getProductsListThunk,} from "../store/slices/productsList.slice";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import "../styles/home.css";
@@ -70,7 +66,7 @@ const Home = () => {
               id="button-addon2"
               onClick={() => dispatch(filterHeadlineThunk(searchValue))}
             >
-              Button
+              Search
             </Button>
           </InputGroup>
 

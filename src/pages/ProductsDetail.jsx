@@ -38,7 +38,6 @@ const ProductsDetail = () => {
   };
 
   const addCart = () => {
-    alert("Añadido a cart");
     const cart = {
       id: productDetail.id,
       quantity: quantity,
@@ -71,23 +70,27 @@ const ProductsDetail = () => {
           <h1>{productDetail?.title}</h1>
           <p>{productDetail?.description}</p>
           <h3>
-           
             <span> Price </span>
             <span>$</span>
             {productDetail?.price}
           </h3>
           <div className="select-buy">
-           <div className="quantity">
-            <label className="label-quantity" htmlFor=""><b>Quantity:</b></label>
-            <input
-              className="form-control me-sm-2 quantity-input"
-              type="number"
-              value={quantity}
-              onChange={(e) => setQuantity(e.target.value)}
-            />
+            <div className="quantity">
+              <label className="label-quantity" htmlFor="">
+                <b>Quantity:</b>
+              </label>
+              <input
+                className="form-control me-sm-2 quantity-input"
+                type="number"
+                value={quantity}
+                onChange={(e) => setQuantity(e.target.value)}
+              />
             </div>
-            
-            <button className="btn btn-primary button-selectBuy" onClick={addCart}>
+
+            <button
+              className="btn btn-primary button-selectBuy"
+              onClick={addCart}
+            >
               <i className="fa-solid fa-cart-shopping"></i>
               buy now
             </button>
