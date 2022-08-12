@@ -2,6 +2,8 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Alert from 'react-bootstrap/Alert';
+import Button from 'react-bootstrap/Button';
 
 const Login = () => {
   const { register, handleSubmit, reset } = useForm();
@@ -23,6 +25,8 @@ const Login = () => {
         console.log(error);
         if (error.response.status === 404) {
           alert("Credenciales inválidas");
+  
+           
         }
         console.log(error.response);
       });

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Offcanvas } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { buyCart, getCartThunk } from "../store/slices/cart.slice";
@@ -9,7 +9,8 @@ const CartSidebar = ({ show, handleClose }) => {
   const dispatch = useDispatch();
   const productsCart = useSelector((state) => state.cart);
   const navigate = useNavigate();
- 
+  // const [numeration , setNumeration] = useState(0)
+   
 
   useEffect(() => {
     dispatch(getCartThunk());
@@ -17,7 +18,9 @@ const CartSidebar = ({ show, handleClose }) => {
 
   console.log(productsCart);
 
-
+  
+    
+    // setNumeration(numeration +1)
 
   const getTotal = (product) =>{
     let results = 0
@@ -30,12 +33,17 @@ const CartSidebar = ({ show, handleClose }) => {
   return (
     <Offcanvas show={show} onHide={handleClose} scroll={true} placement="end">
       <Offcanvas.Header closeButton>
-        <Offcanvas.Title><b>Cart</b></Offcanvas.Title>
+        <Offcanvas.Title><b className="title-cart">My Cart</b></Offcanvas.Title>
       </Offcanvas.Header>
       <Offcanvas.Body >
+   
         {productsCart?.map((productCart) => (
+          
           <div className="body-cart" key={productCart.id}>
             <div className="product-cart">
+          
+            {/* <h4 >Product N°{()=>setNumeration(numeration + 1)}</h4>
+            <h4>{numeration}</h4> */}
             <span><b>Category: </b>{productCart.brand}</span>
             
             <a onClick={() => navigate(`/products/${productCart.id}`)}>

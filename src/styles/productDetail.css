@@ -35,16 +35,18 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  width: 30%;
+  width: 70%;
   text-align: center;
 }
 .quantity {
   display: flex;
   flex-direction: row;
   gap: 10px;
+ 
 }
 .quantity-input {
   text-align: center;
+ 
 }
 .label-quantity {
   margin-top: 5px;

@@ -113,8 +113,9 @@ const ProductsDetail = () => {
                   src={product.productImgs}
                   className="similar-items"
                 />
+                <hr />
                 <Card.Body>
-                  <Card.Title> {product.title}</Card.Title>
+                  <Card.Title> <b>{product.title}</b></Card.Title>
                   <Card.Text>
                     <span>Price</span>
                     <br /> <span>${product.price}</span>

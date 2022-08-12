@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from "react";
-import {filterCategoryThunk,filterHeadlineThunk,getProductsListThunk,} from "../store/slices/productsList.slice";
+import {filterCategoryThunk,filterHeadlineThunk,getProductsListThunk,
+} from "../store/slices/productsList.slice";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import "../styles/home.css";
-import Card from "react-bootstrap/Card";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-import InputGroup from "react-bootstrap/InputGroup";
-import ListGroup from "react-bootstrap/ListGroup";
+import {Card, Col, Row, Button,Form, InputGroup,ListGroup ,}  from "react-bootstrap";
 import axios from "axios";
 
 const Home = () => {
@@ -50,11 +45,8 @@ const Home = () => {
           </ListGroup>
         </Col>
         <Col>
-   
-
           <InputGroup className="mb-3">
             <Form.Control
-              placeholder="search"
               aria-label="Recipient's username"
               aria-describedby="basic-addon2"
               onChange={(e) => setSearchValue(e.target.value)}
@@ -84,10 +76,13 @@ const Home = () => {
                         className="imgProducts"
                         src={product.productImgs}
                       />
-
-                      <Card.Title>{product?.title}</Card.Title>
-                      <Card.Text> Price</Card.Text>
-                      <Card.Text>{product.price}</Card.Text>
+                      <hr />
+                      <Card.Title>
+                        {" "}
+                        <b>{product?.title}</b>{" "}
+                      </Card.Title>
+                      <Card.Text> Price </Card.Text>
+                      <Card.Text>${product.price}</Card.Text>
                     </Card.Body>
                   </Card>
                 </Col>
